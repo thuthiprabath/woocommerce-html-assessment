@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quard Intel e-commerce</title>
+
+    <link href="assets/icons/css/uicons-regular-rounded.css" rel="stylesheet" />
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
+    <link href="assets/lib/star-rating/css/star-rating-svg.css" rel="stylesheet" />
+    <link href="assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="assets/lib/owlcarousel/assets/owl.theme.default.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/scss/style.css" />
+</head>
+<body>
+    <!-- Sticky Header -->
+    <header class="sticky-top bg-light">
+        <div class="container top">
+            <div class="d-flex justify-content-between align-items-center option-bar">
+                <a href="index.html" class="navbar-brand">
+                    <img src="assets/img/logo.png" alt="" />
+                </a>
+                <div class="search-desktop">
+                    <div class="dropdown search-box">
+                        <input type="text" class="form-control dropdown-toggle" placeholder="Search Products"
+                            id="searchBox" data-bs-toggle="dropdown" aria-expanded="false" />
+                        <i class="fi fi-rr-search"></i>
+                        <ul class="dropdown-menu w-100" aria-labelledby="searchBox" id="dropdownList">
+                            <li><a class="dropdown-item" href="#">Controller</a></li>
+                            <li><a class="dropdown-item" href="#">Bluetooth</a></li>
+                            <li><a class="dropdown-item" href="#">Mobile Phone</a></li>
+                            <li><a class="dropdown-item" href="#">Laptop</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="primary-actions">
+                    <ul class="main-action">
+                        <li class="comparison active">
+                            <button class="open-canvas action-button" data-target="#menu1">
+                                <div>
+                                    <span class="number">1</span>
+                                    <i class="fi fi-rr-arrow-comparison"></i>
+                                </div>
+                                <span class="lable">Comparison</span>
+                            </button>
+                        </li>
+                        <li class="favourite">
+                            <button class="open-canvas action-button" data-target="#menu1">
+                                <div>
+                                    <span class="number">1</span>
+                                    <i class="fi fi-rr-heart"></i>
+                                </div>
+                                <span class="lable">Favourite</span>
+                            </button>
+                        </li>
+                        <li class="my-cart">
+                            <button class="action-button" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasCart" aria-controls="offcanvasExample">
+                                <div>
+                                    <span class="number">10</span>
+                                    <i class="fi fi-rr-shopping-cart"></i>
+                                </div>
+                                <span class="lable">My Cart</span>
+                            </button>
+                        </li>
+                        <li class="sign-in">
+                            <div class="action-button">
+                                <div>
+                                    <i class="fi fi-rr-user"></i>
+                                </div>
+                                <span class="lable">Sign in</span>
+                            </div>
+                        </li>
+                        <li class="menu">
+                            <button class="action-button" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasMenu" aria-controls="offcanvasExample">
+                                <div>
+                                    <i class="fi fi-rr-menu-burger"></i>
+                                </div>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Search Box in Mobile -->
+            <div class="mobile-search">
+                <div class="dropdown search-box">
+                    <input type="text" class="form-control dropdown-toggle" placeholder="Search Products" id="searchBox"
+                        data-bs-toggle="dropdown" aria-expanded="false" />
+                    <i class="fi fi-rr-search"></i>
+                    <ul class="dropdown-menu w-100" aria-labelledby="searchBox" id="dropdownList">
+                        <li><a class="dropdown-item" href="#">All Categories</a></li>
+                        <li><a class="dropdown-item" href="#">Audio</a></li>
+                        <li><a class="dropdown-item" href="#">Camera & Drone</a></li>
+                        <li><a class="dropdown-item" href="#">Cell Phones</a></li>
+                        <li><a class="dropdown-item" href="#">Daily Deals</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="main-menu">
+            <div class="container">
+                <button type="button" class="btn btn-secondary category-button" id="popoverDropdown"
+                    data-bs-toggle="popover" data-bs-html="true" data-bs-content="
+                    <ul class='list-unstyled'>
+                    <li><a href='#' class='dropdown-item'>All Categories</a></li>
+                    <li><a href='#' class='dropdown-item'>Audio</a></li>
+                    <li><a href='#' class='dropdown-item'>Camera & Drone</a></li>
+                    <li><a href='#' class='dropdown-item'>Cell Phones</a></li>
+                    <li><a href='#' class='dropdown-item'>Camera & Drone</a></li>
+                    </ul>
+                ">
+                    <div class="d-flex">
+                        <span><i class="fi fi-rr-category"></i> </span><span>All Product Category</span><span> <i
+                                class="fi fi-rr-angle-small-down"></i></span>
+                    </div>
+                </button>
+                <!-- Navbar links -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+
+                    <!-- Submenu Item -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Menu Item 1</a></li>
+                            <li><a class="dropdown-item" href="#">Menu Item 2</a></li>
+                            <li><a class="dropdown-item" href="#">Menu Item 3</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- Main Content -->
+    <main class="container mt-4">
+        <section class="banner">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="banner-1">
+                        <span class="text-white">New Arrival Products</span>
+                        <h3 class="text-white">Sony 5G Headphone</h3>
+                        <h6 class="text-white">No On Sale</h6>
+                        <div class="d-flex">
+                            <h4 class="text-primary">45% </h4>
+                            <button type="button" class="btn btn-primary ms-4">Shop Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="banner-2">
+                        <span class="text-white">New Arrival Products</span>
+                        <h4 class="text-white">Air Mavis 3</h3>
+                            <button type="button" class="btn btn-secondary">Shop Now</button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="banner-3">
+                                <span>Upto 30% Discount</span>
+                                <h4>Gearbox</h3>
+                                    <button type="button" class="btn btn-outline-secondary">Shop Now <i
+                                            class="fi fi-rr-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="banner-4">
+                                <span>Upto 30% Discount</span>
+                                <h4>Gearbox</h3>
+                                    <button type="button" class="btn btn-outline-secondary">Shop Now <i
+                                            class="fi fi-rr-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <h3 class="text-center mb-20">
+                    New Arrival Products
+                </h3>
+                <div class="products owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="product">
+                            <div class="thumbnail">
+                                <a href="category.html">
+                                    <img src="assets/img/product/01.jpg" alt="" class="thumbnail-1">
+                                    <img src="assets/img/product/02.jpg" alt="" class="thumbnail-2">
+                                </a>
+                                <div class="quick-action">
+                                    <ul>
+                                        <li><button>
+                                                <i class="fi fi-rr-heart"></i>
+                                            </button></li>
+                                        <li><button><i class="fi fi-rr-arrow-comparison"></i></button></li>
+                                        <li><button data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fi fi-rr-eye"></i></button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="details">
+                                <a href="#">
+                                    <h2>HomePod</h2>
+                                </a>
+                                <div class="my-rating mb-2"></div>
+                                <span class="price">$1,770.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="product">
+                            <div class="thumbnail">
+                                <a href="category.html">
+                                    <img src="assets/img/product/03.jpg" alt="" class="thumbnail-1">
+                                    <img src="assets/img/product/04.jpg" alt="" class="thumbnail-2">
+                                </a>
+                                <div class="quick-action">
+                                    <ul>
+                                        <li><button>
+                                                <i class="fi fi-rr-heart"></i>
+                                            </button></li>
+                                        <li><button><i class="fi fi-rr-arrow-comparison"></i></button></li>
+                                        <li><button data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fi fi-rr-eye"></i></button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="details">
+                                <a href="#">
+                                    <h2>JBL Go 2</h2>
+                                </a>
+                                <div class="my-rating mb-2"></div>
+                                <span class="price">$299.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="product">
+                            <div class="thumbnail">
+                                <a href="category.html">
+                                    <img src="assets/img/product/05.jpg" alt="" class="thumbnail-1">
+                                    <img src="assets/img/product/06.jpg" alt="" class="thumbnail-2">
+                                </a>
+                                <div class="quick-action">
+                                    <ul>
+                                        <li><button>
+                                                <i class="fi fi-rr-heart"></i>
+                                            </button></li>
+                                        <li><button><i class="fi fi-rr-arrow-comparison"></i></button></li>
+                                        <li><button data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fi fi-rr-eye"></i></button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="details">
+                                <a href="#">
+                                    <h2>iPhone 14</h2>
+                                </a>
+                                <div class="my-rating mb-2"></div>
+                                <span class="price">$299.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="product">
+                            <div class="thumbnail">
+                                <a href="category.html">
+                                    <img src="assets/img/product/07.jpg" alt="" class="thumbnail-1">
+                                    <img src="assets/img/product/08.jpg" alt="" class="thumbnail-2">
+                                </a>
+                                <div class="quick-action">
+                                    <ul>
+                                        <li><button>
+                                                <i class="fi fi-rr-heart"></i>
+                                            </button></li>
+                                        <li><button><i class="fi fi-rr-arrow-comparison"></i></button></li>
+                                        <li><button data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fi fi-rr-eye"></i></button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="details">
+                                <a href="#">
+                                    <h2>Crosoft Xbox Elite</h2>
+                                </a>
+                                <div class="my-rating mb-2"></div>
+                                <span class="price">$39.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="product">
+                            <div class="thumbnail">
+                                <a href="category.html">
+                                    <img src="assets/img/product/09.jpg" alt="" class="thumbnail-1">
+                                    <img src="assets/img/product/10.jpg" alt="" class="thumbnail-2">
+                                </a>
+                                <div class="quick-action">
+                                    <ul>
+                                        <li><button>
+                                                <i class="fi fi-rr-heart"></i>
+                                            </button></li>
+                                        <li><button><i class="fi fi-rr-arrow-comparison"></i></button></li>
+                                        <li><button data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fi fi-rr-eye"></i></button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="details">
+                                <a href="#">
+                                    <h2>Apple iPhone 15 Pro Max 256GB</h2>
+                                </a>
+                                <div class="my-rating mb-2"></div>
+                                <span class="price">$39.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-5">
+                    <button type="button" class="btn btn-outline-primary">Explore More</button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <h3 class="text-center mb-20">
+                    Popular Categories
+                </h3>
+            </div>
+            <div class="category owl-carousel owl-theme">
+                <div class="item">
+                    <div class="product-category-card">
+                        <div class="thumbnail">
+                            <a href="category.html">
+                                <img src="assets/img/product/c1.jpeg" alt="">
+                            </a>
+                        </div>
+                        <div class="details">
+                            <a href="category.html">
+                                <h2>Audio</h2>
+                            </a>
+                            <span class="product-number">3 products</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="product-category-card">
+                        <div class="thumbnail">
+                            <a href="category.html">
+                                <img src="assets/img/product/c2.jpeg" alt="">
+                            </a>
+                        </div>
+                        <div class="details">
+                            <a href="category.html">
+                                <h2>Camera & Drone</h2>
+                            </a>
+                            <span class="product-number">6 products</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="product-category-card">
+                        <div class="thumbnail">
+                            <a href="category.html">
+                                <img src="assets/img/product/c3.jpeg" alt="">
+                            </a>
+                        </div>
+                        <div class="details">
+                            <a href="/category.html">
+                                <h2>Cell Phones</h2>
+                            </a>
+                            <span class="product-number">5 products</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="product-category-card">
+                        <div class="thumbnail">
+                            <a href="category.html">
+                                <img src="assets/img/product/c4.jpeg" alt="">
+                            </a>
+                        </div>
+                        <div class="details">
+                            <a href="/category.html">
+                                <h2>Computers</h2>
+                            </a>
+                            <span class="product-number">5 products</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="product-category-card">
+                        <div class="thumbnail">
+                            <a href="category.html">
+                                <img src="assets/img/product/c5.jpeg" alt="">
+                            </a>
+                        </div>
+                        <div class="details">
+                            <a href="/category.html">
+                                <h2>Daily Deals</h2>
+                            </a>
+                            <span class="product-number">5 products</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="product-category-card">
+                        <div class="thumbnail">
+                            <a href="category.html">
+                                <img src="assets/img/product/c1.jpeg" alt="">
+                            </a>
+                        </div>
+                        <div class="details">
+                            <a href="category.html">
+                                <h2>iPad & Tablets</h2>
+                            </a>
+                            <span class="product-number">7 products</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="product-category-card">
+                        <div class="thumbnail">
+                            <img src="assets/img/product/c1.jpeg" alt="">
+                        </div>
+                        <div class="details">
+                            <a href="/category.html">
+                                <h2>Audio</h2>
+                            </a>
+                            <span class="product-number">3 products</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active dark">
+                        <div class="details">
+                            <div class="contents">
+                                <h6>New Camera. New Design.</h6>
+                                <h3>iPhone 15 Pro Max</h3>
+                                <h6>Titanium. So Strong. So Light. So Pro.</h6>
+                                <button type="button" class="btn btn-primary">Shop Now <i
+                                        class="fi fi-rr-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        <img src="assets/img/bg/slider1.jpeg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <div class="details">
+                            <div class="contents">
+                                <h6 class="text-primary">Experience Sound</h6>
+                                <h3>Freedom with AirPods</h3>
+                                <h6>
+                                    Unleash Wireless Sound Freedom. </h6>
+                                <button type="button" class="btn btn-primary">Shop Now <i
+                                        class="fi fi-rr-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        <img src="assets/img/bg/slider2.jpeg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="assets/img/images/image.png" alt="" width="100%">
+                    </div>
+                    <div class="col-md-6">
+                        <p>Your One-Stop Shop for Quality, Style, and Value</p>
+                        <h3>Discover the World of Quart – Where Shopping Meets Style!</h3>
+                        <p>At Quart Online Shopping, we bring you the finest selection of quality products at unbeatable
+                            prices. From trendy fashion to everyday essentials, our store is your one-stop destination
+                            for a seamless and delightful shopping
+                            experience. Shop smart, live better—only at Quart!</p>
+                        <button type="button" class="btn btn-primary">Shop Now <i
+                                class="fi fi-rr-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="logo">
+                        <img src="assets/img/logo-white.png" alt="">
+                    </div>
+                    <h5>+94 123 234 123</h5>
+                    <address>
+                        215 Western Plaza, Melbourne,
+                        <br>
+                        USA
+                    </address>
+                    <p>contact@quartstore.com</p>
+                    <ul class="social-meida">
+                        <li><a href="#" target="_blank"><i class="fi fi-brands-facebook"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fi fi-brands-twitter-alt"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fi fi-brands-instagram"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fi fi-brands-youtube"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h6>Our Story</h6>
+                    <ul class="menu-footer">
+                        <li><a href="#">Company Profile</a></li>
+                        <li><a href="#">Our Facility</a></li>
+                        <li><a href="#">Our Awards</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h6>Categories</h6>
+                    <ul class="menu-footer">
+                        <li><a href="#">Technologies</a></li>
+                        <li><a href="#">Major Appliances</a></li>
+                        <li><a href="#">Smart Home</a></li>
+                        <li><a href="#">Gaming Laptop</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h6>Quick Link</h6>
+                    <ul class="menu-footer">
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">FAQ’s</a></li>
+                        <li><a href="#">Announcements</a></li>=
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h6>Contact Us</h6>
+                    <ul class="menu-footer">
+                        <li><a href="#">Terms & Condition</a></li>
+                        <li><a href="#">Career with us</a></li>
+                        <li><a href="#">Consumer enquiry</a></li>=
+                    </ul>
+                </div>
+            </div>
+            <div class="row separator">
+                <div class="col-md-6">
+                    <p>Copyright © 2024 e-commerce Created by<a href="#" target="_blank"> Quard Intel</a></p>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex justify-content-end align-items-center">
+                        <p class="me-5 mb-0">We using safe payment for</p>
+                        <img src="assets/img/images/pay.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Offcanvas for Menu -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+                Menu
+            </h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body mobile-menu">
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-menu-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-menu" type="button" role="tab" aria-controls="pills-menu"
+                        aria-selected="true">Home</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-categories-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-categories" type="button" role="tab" aria-controls="pills-categories"
+                        aria-selected="false">Categories</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-menu" role="tabpanel" aria-labelledby="pills-menu-tab"
+                    tabindex="0">
+                    <ul class="mobile-menu-list">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="pills-categories" role="tabpanel" aria-labelledby="pills-categories-tab"
+                    tabindex="0">
+                    <ul class="category-list">
+                        <li><a href="#">All Categories</a></li>
+                        <li><a href="#">Audio</a></li>
+                        <li><a href="#">Camera & Drone</a></li>
+                        <li><a href="#">Cell Phones</a></li>
+                        <li><a href="#">Computers</a></li>
+                        <li><a href="#">Daily Deals</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Offcanvas for Cart -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+                My Cart
+            </h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="product-list">
+                <div class="product">
+                    <div class="product-info">
+                        <div class="thumbnail">
+                            <a href="category.html">
+                                <img src="assets/img/product/01.jpg" alt="" class="thumbnail-1">
+                                <img src="assets/img/product/02.jpg" alt="" class="thumbnail-2">
+                            </a>
+                        </div>
+                        <div class="details">
+                            <a href="#">
+                                <h2>HomePod</h2>
+                            </a>
+                            <div class="my-rating mb-2"></div>
+                            <span class="price">$1,770.00</span>
+                        </div>
+                    </div>
+                    <div class="action">
+                        <button>
+                            <i class="fi fi-rr-cross-small"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-info">
+                        <div class="thumbnail">
+                            <a href="category.html">
+                                <img src="assets/img/product/03.jpg" alt="" class="thumbnail-1">
+                                <img src="assets/img/product/04.jpg" alt="" class="thumbnail-2">
+                            </a>
+                        </div>
+                        <div class="details">
+                            <a href="#">
+                                <h2>HomePod</h2>
+                            </a>
+                            <div class="my-rating mb-2"></div>
+                            <span class="price">$1,770.00</span>
+                        </div>
+                    </div>
+                    <div class="action">
+                        <button>
+                            <i class="fi fi-rr-cross-small"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-info">
+                        <div class="thumbnail">
+                            <a href="category.html">
+                                <img src="assets/img/product/05.jpg" alt="" class="thumbnail-1">
+                                <img src="assets/img/product/06.jpg" alt="" class="thumbnail-2">
+                            </a>
+                        </div>
+                        <div class="details">
+                            <a href="#">
+                                <h2>HomePod</h2>
+                            </a>
+                            <div class="my-rating mb-2"></div>
+                            <span class="price">$1,770.00</span>
+                        </div>
+                    </div>
+                    <div class="action">
+                        <button>
+                            <i class="fi fi-rr-cross-small"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-10">
+                <Button class="btn btn-secondary w-100">Checkout <i class="fi fi-rr-shopping-cart"></i></Button>
+            </div>
+        </div>
+    </div>
+<!-- Quick Details -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasRightLabel">Details</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="product-details-1">
+            <div class="product">
+                <div class="thumbnail">
+                    <a href="category.html">
+                        <img src="assets/img/product/01.jpg" alt="" class="thumbnail-1">
+                        <img src="assets/img/product/02.jpg" alt="" class="thumbnail-2">
+                    </a>
+                </div>
+                <div class="details">
+                    <a href="#">
+                        <h2>Ring Wi-Fi Video Doorbell</h2>
+                    </a>
+                    <span class="price">$1,770.00</span>
+                    <div class="my-rating mb-2"></div>
+                    <div class="d-flex mt-4 ">
+                        <div class="number-input me-4">
+                            <button class="sub">-</button>
+                            <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="1">
+                            <button class="inc">+</button>
+                        </div>
+                        <Button class="btn btn-secondary"><i class="fi fi-rr-shopping-cart"></i>  Add To Cart</i></Button>
+                    </div>
+                    <div class="text-button mt-2">
+                        <Button class="btn-quick p-0 w-100 text-start"><i class="fi fi-rr-arrow-comparison"></i>  Add to compare </i></Button>
+                        <Button class="btn-quick p-0 w-100 text-start"> <i class="fi fi-rr-heart"></i> Add to wishlist </i></Button>
+                       </div>
+                       <div class="list-info">
+                        <ul>
+                            <li><span>SKU:</span> #000487028</li>
+                            <li><span>Category:</span> Smart Home</li>
+                            <li><span>Tags:</span> Natural , Titanium</li>
+                            <li><span>Estimated delivery:</span> 3 days</li>
+                        </ul>
+                       </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="assets/lib/star-rating/jquery.star-rating-svg.js"></script>
+    <script src="assets/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+.page-option-bar {
+    display: flex;
+    justify-content: space-between;
+    .layout-option{
+        .btn{
+            i{
+                display: flex;
+            }
+        }
+    }
+}

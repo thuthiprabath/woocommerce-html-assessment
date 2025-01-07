@@ -1,0 +1,31 @@
+.number-input {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    border: solid 1px;
+    border-radius: 7px;
+    input {
+        width: 50px;
+        text-align: center;
+        border-left: solid 1px;
+        border-right: solid 1px;
+        border-radius: 0;
+        height: 100%;
+    }
+    button{
+        background-color: $gray-100;
+        border: none;
+        padding: 8px;
+        &:hover{
+            background-color: $gray-700;
+        }
+        &.sub{
+            border-radius: 7px 0px 0px 7px;
+
+        }
+        &.inc{
+            border-radius: 0px 7px 7px 0px;
+
+        }
+    }
+}

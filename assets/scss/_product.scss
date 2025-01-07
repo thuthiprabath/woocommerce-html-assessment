@@ -1,0 +1,106 @@
+.product {
+  .thumbnail {
+    position: relative;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+    img.thumbnail-1 {
+    }
+    img.thumbnail-2 {
+      display: none;
+    }
+    .quick-action {
+      position: absolute;
+      top: 104%;
+      width: 100%;
+      text-align: center;
+      transition: 0.5s;
+      ul {
+        padding: 0;
+        margin: 0;
+        li {
+          display: inline;
+          margin: 15px;
+          transition: 0.5s;
+          button {
+            background-color: $gray-100;
+            border: none;
+            padding: 10px;
+            font-size: 17px;
+            border-radius: 50%;
+            -webkit-box-shadow: 2px -2px 4px -1px rgba(0, 0, 0, 0.18);
+            -moz-box-shadow: 2px -2px 4px -1px rgba(0, 0, 0, 0.18);
+            box-shadow: 2px -2px 4px -1px rgba(0, 0, 0, 0.18);
+            i {
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+  }
+  .details {
+    padding: 20px 20px 20px;
+    a {
+      text-decoration: none;
+    }
+    h2 {
+      font-size: 1rem;
+    }
+  }
+  &:hover {
+    .quick-action {
+      top: 45%;
+      transition: 0.5s;
+      ul {
+        li {
+          margin: 8px;
+          transition: 0.5s;
+        }
+      }
+    }
+    .thumbnail {
+      img.thumbnail-2 {
+        display: block;
+        transition: 0.5s;
+      }
+      img.thumbnail-1 {
+        display: none;
+        transition: 0.5s;
+      }
+    }
+  }
+}
+.product-list {
+  .product {
+    display: flex;
+    justify-content: space-between;
+    .product-info {
+      display: flex;
+      .thumbnail {
+        img {
+          width: 120px;
+        }
+      }
+      .details {
+        padding: 10px 10px;
+      }
+    }
+    .action {
+      button {
+        background-color: $gray-100;
+        border: none;
+        padding: 10px 16px;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: block;
+        font-size: 18px;
+        &:hover {
+          background-color: $gray-500;
+        }
+      }
+    }
+  }
+}
